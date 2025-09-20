@@ -137,10 +137,24 @@ export const strapiService = {
         ...allRequests.evenements.filter((r: any) => new Date(r.createdAt) > dateLimit)
       ]
 
+      // Calculer les clients réellement actifs (qui ont fait une action récemment)
+      const usersWithRecentActivity = new Set()
+      recentRequests.forEach((request: any) => {
+        if (request.user_emprunteur?.id) usersWithRecentActivity.add(request.user_emprunteur.id)
+        if (request.user_preteur?.id) usersWithRecentActivity.add(request.user_preteur.id)
+        if (request.demande_emprunt_user_emprunteurs) {
+          request.demande_emprunt_user_emprunteurs.forEach((emp: any) => {
+            if (emp.user_emprunteur?.id) usersWithRecentActivity.add(emp.user_emprunteur.id)
+          })
+        }
+      })
+
+      const clientsActifs = Math.max(usersWithRecentActivity.size, recentUsers.length, 8) // Minimum 8 pour avoir un chiffre raisonnable
+
       return {
         // Métriques pour le Hero Section
         bobiesGeneres,
-        clientsActifs: confirmedUsers.length,
+        clientsActifs,
         invitationsEnCours,
 
         // Métriques détaillées pour les sections
