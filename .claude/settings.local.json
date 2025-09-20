@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Read(//c/Users/jcmei/OneDrive/Bureau/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
