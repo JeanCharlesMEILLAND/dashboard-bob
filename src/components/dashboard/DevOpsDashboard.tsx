@@ -1,6 +1,6 @@
 'use client'
 
-import { Server, Cpu, HardDrive, Wifi, Shield, AlertTriangle, CheckCircle, Terminal } from 'lucide-react'
+import { Server, Cpu, HardDrive, Wifi, AlertTriangle, CheckCircle } from 'lucide-react'
 import MetricCard from '@/components/ui/MetricCard'
 import Card from '@/components/ui/Card'
 import {
@@ -42,7 +42,7 @@ export default function DevOpsDashboard() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Vue d'ensemble DevOps
+            Vue d&apos;ensemble DevOps
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-1">
             Monitoring système et infrastructure en temps réel
@@ -171,7 +171,7 @@ export default function DevOpsDashboard() {
 
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium text-gray-900 dark:text-white">Taux d'erreur</p>
+                <p className="font-medium text-gray-900 dark:text-white">Taux d&apos;erreur</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Dernière heure</p>
               </div>
               <span className={`font-bold ${

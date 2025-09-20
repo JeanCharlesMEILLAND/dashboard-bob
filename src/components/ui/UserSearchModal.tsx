@@ -137,7 +137,7 @@ export default function UserSearchModal({ isOpen, onClose }: UserSearchModalProp
 
                 {searchTerm.length >= 2 && !loading && searchResults.length === 0 && (
                   <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                    Aucun utilisateur trouvé pour "{searchTerm}"
+                    Aucun utilisateur trouvé pour &quot;{searchTerm}&quot;
                   </div>
                 )}
               </div>
@@ -305,7 +305,7 @@ export default function UserSearchModal({ isOpen, onClose }: UserSearchModalProp
                     </div>
                   ) : (
                     <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                      Cet utilisateur n'a encore fait aucun BOB
+                      Cet utilisateur n&apos;a encore fait aucun BOB
                     </div>
                   )}
                 </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Users, TrendingUp, Activity, Eye, Globe, Star, Target, Zap, Clock, ArrowUpRight, CreditCard, Banknote, Calendar, Briefcase, PieChart, Search } from 'lucide-react'
+import { Users, TrendingUp, Eye, Globe, Star, Target, Clock, ArrowUpRight, CreditCard, Banknote, Calendar, Briefcase, PieChart, Search } from 'lucide-react'
 import MetricCardPro from '@/components/ui/MetricCardPro'
 import Card from '@/components/ui/Card'
 import UserSearchModal from '@/components/ui/UserSearchModal'
@@ -9,7 +9,6 @@ import PopularProductsWidget from '@/components/ui/PopularProductsWidget'
 import {
   useBusinessMetrics,
   useUsers,
-  formatCurrency,
   formatNumber
 } from '@/hooks/useSystemData'
 
@@ -329,7 +328,7 @@ export default function DataDashboardPro() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 dark:text-white">Pages vues</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Aujourd'hui</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Aujourd&apos;hui</p>
                     </div>
                   </div>
                   <span className="text-xl font-bold text-gray-900 dark:text-white">

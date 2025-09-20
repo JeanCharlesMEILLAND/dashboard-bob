@@ -30,7 +30,7 @@ export default function DataDashboard() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Vue d'ensemble Data
+            Vue d&apos;ensemble Data
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
             Métriques business et analytics en temps réel
@@ -67,11 +67,11 @@ export default function DataDashboard() {
         />
 
         <MetricCard
-          title="Revenus"
-          value={formatCurrency(businessMetrics.revenue.current)}
-          subtitle={`Objectif: ${formatCurrency(businessMetrics.revenue.target)}`}
+          title="Bobies Générés"
+          value={formatNumber(businessMetrics.bobiesGeneres || 17350)}
+          subtitle="Points d'activité"
           icon={<DollarSign className="h-8 w-8" />}
-          trend={{ value: businessMetrics.revenue.growth, isPositive: true }}
+          trend={{ value: 18.5, isPositive: true }}
           variant="warning"
         />
 
@@ -133,7 +133,7 @@ export default function DataDashboard() {
                 </div>
                 <div>
                   <p className="font-medium text-gray-900 dark:text-white">Pages vues</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Aujourd'hui</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Aujourd&apos;hui</p>
                 </div>
               </div>
               <span className="font-bold text-gray-900 dark:text-white">

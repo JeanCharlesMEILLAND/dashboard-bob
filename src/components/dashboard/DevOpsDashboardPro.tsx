@@ -1,6 +1,6 @@
 'use client'
 
-import { Server, Cpu, HardDrive, Wifi, Shield, AlertTriangle, CheckCircle, Terminal, Database, Activity, Zap, Clock, Users, Globe } from 'lucide-react'
+import { Server, Cpu, HardDrive, Wifi, AlertTriangle, CheckCircle, Terminal, Database, Activity, Zap, Clock, Users } from 'lucide-react'
 import MetricCardPro from '@/components/ui/MetricCardPro'
 import Card from '@/components/ui/Card'
 import {

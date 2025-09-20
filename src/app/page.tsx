@@ -11,7 +11,7 @@ import DevOpsDashboardPro from '@/components/dashboard/DevOpsDashboardPro'
 
 export default function Dashboard() {
   const [mode, setMode] = useState<'data' | 'devops'>('devops')
-  const [notifications, setNotifications] = useState<number>(3)
+  const [notifications] = useState<number>(3)
   const [isLoading, setIsLoading] = useState(true)
   const [showNotificationPanel, setShowNotificationPanel] = useState(false)
 
