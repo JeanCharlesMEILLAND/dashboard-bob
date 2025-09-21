@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ChevronDown, X } from 'lucide-react'
+import { useRequireAuth } from '@/lib/auth'
 
 // Components
 import Header from '@/components/layout/Header'
@@ -10,6 +11,7 @@ import DataDashboardPro from '@/components/dashboard/DataDashboardPro'
 import DevOpsDashboardPro from '@/components/dashboard/DevOpsDashboardPro'
 
 export default function Dashboard() {
+  const { isAuthenticated, isLoading: authLoading } = useRequireAuth()
   const [mode, setMode] = useState<'data' | 'devops'>('devops')
   const [notifications] = useState<number>(3)
   const [isLoading, setIsLoading] = useState(true)
@@ -24,7 +26,13 @@ export default function Dashboard() {
     setMode(prev => prev === 'data' ? 'devops' : 'data')
   }
 
-  if (isLoading) {
+  // Afficher le loading si l'auth est en cours ou si le dashboard charge
+  if (authLoading || isLoading) {
+    return <LoadingScreenAdvanced />
+  }
+
+  // Si pas authentifié, le useRequireAuth redirige automatiquement
+  if (!isAuthenticated) {
     return <LoadingScreenAdvanced />
   }
 
